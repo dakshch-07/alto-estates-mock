@@ -1315,6 +1315,41 @@ export default function App() {
           .hero-stats-bar {
             display: none !important;
           }
+          
+          /* Mobile Padding Cleanups */
+          #properties, #about, #reviews, #contact {
+            padding: 8vh 6vw !important;
+          }
+          #contact-footer {
+            padding: 8vh 6vw 4vh 6vw !important;
+          }
+          
+          /* Hero Caption adjustments */
+          .hero-caption-item {
+            white-space: normal !important;
+            font-size: 14px !important;
+            width: 100%;
+            padding: 0 10px;
+          }
+          
+          /* Hero CTAs Stacking */
+          .hero-btns-container {
+            flex-direction: column !important;
+            gap: 12px !important;
+            width: 100% !important;
+            padding: 0 20px;
+          }
+          .hero-primary-btn, .hero-secondary-btn {
+            width: 100% !important;
+            max-width: 280px !important;
+            text-align: center !important;
+          }
+          
+          /* Testimonials blockquote responsiveness */
+          #reviews blockquote {
+            font-size: 20px !important;
+            line-height: 1.4 !important;
+          }
         }
 
         /* Prefers-reduced-motion overrides */
@@ -1534,9 +1569,9 @@ export default function App() {
           </div>
           {/* Nav utilities */}
           <div className="nav-links-container" style={{ display: 'flex', gap: '30px' }}>
-            <a href="#properties" className="nav-link" style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em' }}>[ PROPERTIES ]</a>
-            <a href="#about" className="nav-link" style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em' }}>[ ABOUT ]</a>
-            <a href="#contact" className="nav-link" style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em' }}>[ CONTACT ]</a>
+            <a href="#properties" className="nav-link" style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em' }}>PROPERTIES</a>
+            <a href="#about" className="nav-link" style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em' }}>ABOUT</a>
+            <a href="#contact" className="nav-link" style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em' }}>CONTACT</a>
           </div>
         </nav>
 
@@ -1717,12 +1752,12 @@ export default function App() {
               return (
                 <span
                   key={idx}
+                  className="hero-caption-item"
                   style={{
                     position: isActive ? 'relative' : 'absolute',
                     opacity: isActive ? 1 : 0,
                     transform: isActive ? 'translate3d(0, 0, 0)' : 'translate3d(0, 8px, 0)',
                     transition: 'opacity 1.0s ease-in-out, transform 1.0s cubic-bezier(0.16, 1, 0.3, 1)',
-                    whiteSpace: 'nowrap',
                     pointerEvents: isActive ? 'auto' : 'none',
                   }}
                 >
@@ -1733,7 +1768,7 @@ export default function App() {
           </div>
 
           {/* Buttons */}
-          <div style={{
+          <div className="hero-btns-container" style={{
             display: 'flex',
             gap: '20px',
             justifyContent: 'center',
