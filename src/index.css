@@ -1,0 +1,88 @@
+/* ÂLTO ESTATES — Global Styles & Reset */
+
+:root {
+  --parallax-factor-jellyfish: -0.08;
+  --parallax-factor-ring: -0.14;
+  --parallax-factor-bg: -0.04;
+  --parallax-factor-s2-head: -0.06;
+  --parallax-factor-s3-right: 0.05;
+  --parallax-factor-s5-quote: -0.10;
+  --parallax-factor-footer-logo: -0.03;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --parallax-factor-jellyfish: -0.032; /* 60% reduction */
+    --parallax-factor-ring: -0.056;
+    --parallax-factor-bg: -0.016;
+    --parallax-factor-s2-head: -0.024;
+    --parallax-factor-s3-right: 0.02;
+    --parallax-factor-s5-quote: -0.04;
+    --parallax-factor-footer-logo: -0.012;
+  }
+}
+
+/* Hide default cursor on desktop to support custom follower cursor */
+@media (min-width: 768px) {
+  html, body, a, button, [role="button"], .property-card, .footer-link, .nav-link, .dark-pill, .dark-circle {
+    cursor: none !important;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #f5f1eb;
+  color: #1a1614;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f5f1eb;
+  color: #1a1614;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+}
+
+/* Custom Scrollbar for Luxury Experience */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f1eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a96e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a1614;
+}
